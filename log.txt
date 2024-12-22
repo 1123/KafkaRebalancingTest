@@ -1,0 +1,1338 @@
+/Users/benediktlinse/Library/Java/JavaVirtualMachines/corretto-22.0.2/Contents/Home/bin/java -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=65525:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/benediktlinse/.m2/repository/org/junit/platform/junit-platform-launcher/1.11.4/junit-platform-launcher-1.11.4.jar:/Users/benediktlinse/.m2/repository/org/junit/vintage/junit-vintage-engine/5.11.4/junit-vintage-engine-5.11.4.jar:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar:/Applications/IntelliJ IDEA CE.app/Contents/plugins/junit/lib/junit5-rt.jar:/Applications/IntelliJ IDEA CE.app/Contents/plugins/junit/lib/junit-rt.jar:/Users/benediktlinse/repos/1123/datev/2024-12-18-code-review/questionsAndAnswersTests/target/test-classes:/Users/benediktlinse/repos/1123/datev/2024-12-18-code-review/questionsAndAnswersTests/target/classes:/Users/benediktlinse/.m2/repository/org/apache/kafka/kafka-clients/3.9.0/kafka-clients-3.9.0.jar:/Users/benediktlinse/.m2/repository/com/github/luben/zstd-jni/1.5.6-4/zstd-jni-1.5.6-4.jar:/Users/benediktlinse/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/benediktlinse/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar:/Users/benediktlinse/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/benediktlinse/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/Users/benediktlinse/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar:/Users/benediktlinse/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.4/junit-jupiter-5.11.4.jar:/Users/benediktlinse/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.jar:/Users/benediktlinse/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/benediktlinse/.m2/repository/org/junit/platform/junit-platform-commons/1.11.4/junit-platform-commons-1.11.4.jar:/Users/benediktlinse/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/benediktlinse/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.4/junit-jupiter-params-5.11.4.jar:/Users/benediktlinse/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.4/junit-jupiter-engine-5.11.4.jar:/Users/benediktlinse/.m2/repository/org/junit/platform/junit-platform-engine/1.11.4/junit-platform-engine-1.11.4.jar:/Users/benediktlinse/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/benediktlinse/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest,testRebalancingWithOngoingConsumption
+[main] INFO org.apache.kafka.clients.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:65437]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.9.0
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 84caaa6e9da06435
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1734772879966
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Trying to delete topic
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Topic rebalancing-test did not exist. Therefore nothing was deleted. 
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Successfully created topic rebalancing-test
+[kafka-admin-client-thread | adminclient-1] INFO org.apache.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+[kafka-admin-client-thread | adminclient-1] INFO org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+[kafka-admin-client-thread | adminclient-1] INFO org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[kafka-admin-client-thread | adminclient-1] INFO org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Producing 100 messages to topic rebalancing-test
+[main] INFO org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:65437]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[main] INFO org.apache.kafka.common.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+[main] INFO org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.9.0
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 84caaa6e9da06435
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1734772880269
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Producing 100 messages to topic rebalancing-test
+[kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+[kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Successfully produced messages
+[main] INFO org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[main] INFO org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+[main] INFO org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[main] INFO org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+[main] INFO org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Starting 6 consumer threads. Each message processing will take 120000 milliseconds to process.
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Started consumer threads
+[Thread-5] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:65437]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 61bcb284-7d9f-4867-bcc5-12a9427766fd
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[Thread-4] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:65437]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 61bcb284-7d9f-4867-bcc5-12a9427766fd
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[Thread-3] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:65437]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 61bcb284-7d9f-4867-bcc5-12a9427766fd
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[Thread-1] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:65437]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 61bcb284-7d9f-4867-bcc5-12a9427766fd
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[Thread-2] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:65437]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 61bcb284-7d9f-4867-bcc5-12a9427766fd
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[Thread-0] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:65437]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = 61bcb284-7d9f-4867-bcc5-12a9427766fd
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[Thread-5] INFO org.apache.kafka.common.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+[Thread-1] INFO org.apache.kafka.common.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+[Thread-2] INFO org.apache.kafka.common.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+[Thread-3] INFO org.apache.kafka.common.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+[Thread-0] INFO org.apache.kafka.common.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+[Thread-4] INFO org.apache.kafka.common.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+[Thread-1] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.9.0
+[Thread-1] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 84caaa6e9da06435
+[Thread-1] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1734772880623
+[Thread-4] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.9.0
+[Thread-4] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 84caaa6e9da06435
+[Thread-4] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1734772880623
+[Thread-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.9.0
+[Thread-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 84caaa6e9da06435
+[Thread-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1734772880623
+[Thread-3] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.9.0
+[Thread-3] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 84caaa6e9da06435
+[Thread-3] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1734772880623
+[Thread-0] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.9.0
+[Thread-0] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 84caaa6e9da06435
+[Thread-0] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1734772880623
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Subscribed to topic(s): rebalancing-test
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Subscribed to topic(s): rebalancing-test
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Subscribed to topic(s): rebalancing-test
+[Thread-5] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.9.0
+[Thread-5] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 84caaa6e9da06435
+[Thread-5] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1734772880623
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Subscribed to topic(s): rebalancing-test
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Subscribed to topic(s): rebalancing-test
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Subscribed to topic(s): rebalancing-test
+[Thread-1] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+[Thread-3] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+[Thread-5] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+[Thread-0] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+[Thread-4] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+[Thread-2] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Cluster ID: 4L6g3nShT-eMCtK--X86sw
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-4] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-1] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-0] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-2] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-3] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-5] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-1] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-0] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-2] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-4] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+[Thread-3] INFO org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Client requested disconnect from node 2147483646
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Group coordinator localhost:65437 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Requesting disconnect from last known coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: need to re-join with the given member-id: consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: need to re-join with the given member-id: consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: need to re-join with the given member-id: consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2-d61f6da8-9905-4cd4-add4-bf2800b3f4c7
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=1, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d', protocol='range'}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=1, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7', protocol='range'}
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=1, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2-d61f6da8-9905-4cd4-add4-bf2800b3f4c7', protocol='range'}
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: need to re-join with the given member-id: consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5-b6e6d7c6-c9c9-403e-a1b5-52c372c3f417
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Finished assignment for group at generation 1: {consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d=Assignment(partitions=[rebalancing-test-4, rebalancing-test-5]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7=Assignment(partitions=[rebalancing-test-2, rebalancing-test-3]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2-d61f6da8-9905-4cd4-add4-bf2800b3f4c7=Assignment(partitions=[rebalancing-test-0, rebalancing-test-1])}
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] SyncGroup failed: The group began another rebalance. Need to re-join the group. Sent generation was Generation{generationId=1, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2-d61f6da8-9905-4cd4-add4-bf2800b3f4c7', protocol='range'}
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'The group is rebalancing, so a rejoin is needed.' (RebalanceInProgressException)
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] SyncGroup failed: The group began another rebalance. Need to re-join the group. Sent generation was Generation{generationId=1, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7', protocol='range'}
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] SyncGroup failed: The group began another rebalance. Need to re-join the group. Sent generation was Generation{generationId=1, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d', protocol='range'}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'The group is rebalancing, so a rejoin is needed.' (RebalanceInProgressException)
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'The group is rebalancing, so a rejoin is needed.' (RebalanceInProgressException)
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=2, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5-b6e6d7c6-c9c9-403e-a1b5-52c372c3f417', protocol='range'}
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=2, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d', protocol='range'}
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=2, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2-d61f6da8-9905-4cd4-add4-bf2800b3f4c7', protocol='range'}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=2, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7', protocol='range'}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Finished assignment for group at generation 2: {consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5-b6e6d7c6-c9c9-403e-a1b5-52c372c3f417=Assignment(partitions=[rebalancing-test-5]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d=Assignment(partitions=[rebalancing-test-4]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7=Assignment(partitions=[rebalancing-test-2, rebalancing-test-3]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2-d61f6da8-9905-4cd4-add4-bf2800b3f4c7=Assignment(partitions=[rebalancing-test-0, rebalancing-test-1])}
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=2, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5-b6e6d7c6-c9c9-403e-a1b5-52c372c3f417', protocol='range'}
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=2, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d', protocol='range'}
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-5])
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-4])
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=2, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2-d61f6da8-9905-4cd4-add4-bf2800b3f4c7', protocol='range'}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=2, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7', protocol='range'}
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-0, rebalancing-test-1])
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-2, rebalancing-test-3])
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: need to re-join with the given member-id: consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6-33aabfd5-f959-4bf9-b235-a55687daeba6
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-2, rebalancing-test-3
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-0, rebalancing-test-1
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-5
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-4
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Discovered group coordinator localhost:65437 (id: 2147483646 rack: null)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Found no committed offset for partition rebalancing-test-2
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Found no committed offset for partition rebalancing-test-5
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Found no committed offset for partition rebalancing-test-1
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Found no committed offset for partition rebalancing-test-0
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Found no committed offset for partition rebalancing-test-3
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Found no committed offset for partition rebalancing-test-4
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: need to re-join with the given member-id: consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1-c99fe812-f1ae-4d6e-81cc-80ffe28a08bf
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Resetting offset for partition rebalancing-test-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}.
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Resetting offset for partition rebalancing-test-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}.
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Resetting offset for partition rebalancing-test-4 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}.
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Resetting offset for partition rebalancing-test-5 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}.
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Resetting offset for partition rebalancing-test-3 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}.
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Resetting offset for partition rebalancing-test-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}.
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-1] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-1] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-1, rebalancing-test-0]
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-2, rebalancing-test-3]
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-4]
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-5]
+[Thread-1] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 1, leaderEpoch = 0, offset = 0, CreateTime = 1734772880433, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 2134c841-c995-4c3e-a8ef-e994251e1a38, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 0, CreateTime = 1734772880427, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 35a265c2-d7d0-472a-94d2-b278ca6cb88c, value = bar)
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 0, CreateTime = 1734772880436, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 49d3c564-369b-49b6-996e-efd0c68b0564, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 0, CreateTime = 1734772880462, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 32b00c7e-fbe2-47d9-b5e5-a14e9ba6acd3, value = bar)
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[main] INFO io.confluent.examples.rebalancing.longrunning.RebalancingWithOnGoingConsumptionTest - Stopping one consumer. This will trigger a rebalance. 
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Revoke previously assigned partitions rebalancing-test-0, rebalancing-test-1
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Member consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2-d61f6da8-9905-4cd4-add4-bf2800b3f4c7 sending LeaveGroup request to coordinator localhost:65437 (id: 2147483646 rack: null) due to the consumer is being closed
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Resetting generation and member id due to: consumer pro-actively leaving the group
+[Thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: consumer pro-actively leaving the group
+[Thread-1] INFO org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+[Thread-1] INFO org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[Thread-1] INFO org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+[Thread-1] INFO org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+[Thread-1] INFO org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-2 unregistered
+Exception in thread "Thread-1" java.lang.RuntimeException: java.lang.InterruptedException: sleep interrupted
+	at io.confluent.examples.rebalancing.longrunning.ConsumerThread.processRecord(ConsumerThread.java:49)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at io.confluent.examples.rebalancing.longrunning.ConsumerThread.run(ConsumerThread.java:38)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base/java.lang.Thread.sleepNanos(Thread.java:491)
+	at java.base/java.lang.Thread.sleep(Thread.java:522)
+	at io.confluent.examples.rebalancing.longrunning.ConsumerThread.processRecord(ConsumerThread.java:48)
+	... 3 more
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 0 records
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 0 records
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - []
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - []
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[kafka-coordinator-heartbeat-thread | 61bcb284-7d9f-4867-bcc5-12a9427766fd] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Request joining group due to: group is already rebalancing
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 0, CreateTime = 1734772880427, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 35a265c2-d7d0-472a-94d2-b278ca6cb88c, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 0, CreateTime = 1734772880436, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 49d3c564-369b-49b6-996e-efd0c68b0564, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 0, CreateTime = 1734772880462, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 32b00c7e-fbe2-47d9-b5e5-a14e9ba6acd3, value = bar)
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Revoke previously assigned partitions rebalancing-test-5
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Revoke previously assigned partitions rebalancing-test-4
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Revoke previously assigned partitions rebalancing-test-2, rebalancing-test-3
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] (Re-)joining group
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5-b6e6d7c6-c9c9-403e-a1b5-52c372c3f417', protocol='range'}
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d', protocol='range'}
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6-33aabfd5-f959-4bf9-b235-a55687daeba6', protocol='range'}
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1-c99fe812-f1ae-4d6e-81cc-80ffe28a08bf', protocol='range'}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully joined group with generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7', protocol='range'}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Finished assignment for group at generation 3: {consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5-b6e6d7c6-c9c9-403e-a1b5-52c372c3f417=Assignment(partitions=[rebalancing-test-4]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d=Assignment(partitions=[rebalancing-test-3]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6-33aabfd5-f959-4bf9-b235-a55687daeba6=Assignment(partitions=[rebalancing-test-5]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1-c99fe812-f1ae-4d6e-81cc-80ffe28a08bf=Assignment(partitions=[rebalancing-test-0, rebalancing-test-1]), consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7=Assignment(partitions=[rebalancing-test-2])}
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5-b6e6d7c6-c9c9-403e-a1b5-52c372c3f417', protocol='range'}
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-4])
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-5, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-4
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4-e9cf570c-1a36-4fd3-b2f6-b54a9d0a902d', protocol='range'}
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-3])
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-4, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-3
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6-33aabfd5-f959-4bf9-b235-a55687daeba6', protocol='range'}
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1-c99fe812-f1ae-4d6e-81cc-80ffe28a08bf', protocol='range'}
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-5])
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-6, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-5
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-0, rebalancing-test-1])
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-1, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-0, rebalancing-test-1
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Successfully synced group in generation Generation{generationId=3, memberId='consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3-1f15ed45-0bda-4d36-ad3f-f9f63cbf2af7', protocol='range'}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Notifying assignor about the new Assignment(partitions=[rebalancing-test-2])
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-61bcb284-7d9f-4867-bcc5-12a9427766fd-3, groupId=61bcb284-7d9f-4867-bcc5-12a9427766fd] Adding newly assigned partitions: rebalancing-test-2
+[Thread-2] INFO org.apache.kafka.clients.consumer.internals.ConsumerUtils - Setting offset for partition rebalancing-test-3 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerUtils - Setting offset for partition rebalancing-test-1 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}
+[Thread-0] INFO org.apache.kafka.clients.consumer.internals.ConsumerUtils - Setting offset for partition rebalancing-test-4 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}
+[Thread-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerUtils - Setting offset for partition rebalancing-test-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}
+[Thread-4] INFO org.apache.kafka.clients.consumer.internals.ConsumerUtils - Setting offset for partition rebalancing-test-5 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}
+[Thread-5] INFO org.apache.kafka.clients.consumer.internals.ConsumerUtils - Setting offset for partition rebalancing-test-2 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[localhost:65437 (id: 1 rack: null)], epoch=0}}
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-1, rebalancing-test-0]
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 0, leaderEpoch = 0, offset = 0, CreateTime = 1734772880394, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = e0346922-d22e-45d6-9140-2356e838093a, value = bar)
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-3]
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 3, leaderEpoch = 0, offset = 0, CreateTime = 1734772880431, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = eca3b7e0-04c8-4d98-8cd9-a59f1a87b1a6, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-2]
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-5]
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-4]
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 1, CreateTime = 1734772880444, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 0e319ccb-29f8-4bdf-b658-186ee7a51a4b, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 1, CreateTime = 1734772880442, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 8cfeb105-7692-47c7-8a7e-3809921ad8c9, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 1, CreateTime = 1734772880465, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 70780a10-ce60-4d48-a431-d8e1fcac1663, value = bar)
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 0, leaderEpoch = 0, offset = 0, CreateTime = 1734772880394, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = e0346922-d22e-45d6-9140-2356e838093a, value = bar)
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 3, leaderEpoch = 0, offset = 0, CreateTime = 1734772880431, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = eca3b7e0-04c8-4d98-8cd9-a59f1a87b1a6, value = bar)
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 1, CreateTime = 1734772880465, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 70780a10-ce60-4d48-a431-d8e1fcac1663, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 1, CreateTime = 1734772880444, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 0e319ccb-29f8-4bdf-b658-186ee7a51a4b, value = bar)
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 1, CreateTime = 1734772880442, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 8cfeb105-7692-47c7-8a7e-3809921ad8c9, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-3]
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 3, leaderEpoch = 0, offset = 1, CreateTime = 1734772880448, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 39ecaa1a-5acf-4edc-96c4-dbe107f5bec1, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-1, rebalancing-test-0]
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 0, leaderEpoch = 0, offset = 1, CreateTime = 1734772880456, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = cfad5d5f-cff5-4549-9404-b0cdf00f5dd2, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-2]
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 2, CreateTime = 1734772880468, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 1832ea37-d5aa-4849-95b9-757540b4c516, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-4]
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 2, CreateTime = 1734772880454, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = d6016a6c-506f-4224-bd8c-9ffa7f5da792, value = bar)
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-5]
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 2, CreateTime = 1734772880445, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = ddcc19a6-ecfb-4185-a14c-723007583e1b, value = bar)
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 0, leaderEpoch = 0, offset = 1, CreateTime = 1734772880456, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = cfad5d5f-cff5-4549-9404-b0cdf00f5dd2, value = bar)
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 3, leaderEpoch = 0, offset = 1, CreateTime = 1734772880448, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 39ecaa1a-5acf-4edc-96c4-dbe107f5bec1, value = bar)
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 2, CreateTime = 1734772880468, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 1832ea37-d5aa-4849-95b9-757540b4c516, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 2, CreateTime = 1734772880454, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = d6016a6c-506f-4224-bd8c-9ffa7f5da792, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 2, CreateTime = 1734772880445, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = ddcc19a6-ecfb-4185-a14c-723007583e1b, value = bar)
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-2]
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 3, CreateTime = 1734772880473, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = c4a8fff5-01ad-4778-9d02-906bc34dd0ee, value = bar)
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-1, rebalancing-test-0]
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 0, leaderEpoch = 0, offset = 2, CreateTime = 1734772880457, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 0f82ddd4-791e-40d9-986b-cf31c970f120, value = bar)
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-3]
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 3, leaderEpoch = 0, offset = 2, CreateTime = 1734772880450, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = f7e7c40d-ced3-48c4-aab9-e338c1f1cce5, value = bar)
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-5]
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 3, CreateTime = 1734772880460, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = f44eb5a2-bd5f-461e-8171-0f1837c48a62, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-4]
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 3, CreateTime = 1734772880466, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 0c89064c-248f-4f78-beb4-0bf23bd2d092, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 3, CreateTime = 1734772880473, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = c4a8fff5-01ad-4778-9d02-906bc34dd0ee, value = bar)
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 0, leaderEpoch = 0, offset = 2, CreateTime = 1734772880457, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 0f82ddd4-791e-40d9-986b-cf31c970f120, value = bar)
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 3, leaderEpoch = 0, offset = 2, CreateTime = 1734772880450, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = f7e7c40d-ced3-48c4-aab9-e338c1f1cce5, value = bar)
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 3, CreateTime = 1734772880460, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = f44eb5a2-bd5f-461e-8171-0f1837c48a62, value = bar)
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Finished processing records: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 3, CreateTime = 1734772880466, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 0c89064c-248f-4f78-beb4-0bf23bd2d092, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Calling Commit Sync
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-2]
+[Thread-5] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 2, leaderEpoch = 0, offset = 4, CreateTime = 1734772880484, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 74136ca3-ff3b-4570-ab41-2595ec834c65, value = bar)
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-1, rebalancing-test-0]
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-3] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 0, leaderEpoch = 0, offset = 3, CreateTime = 1734772880470, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = e83f4b6c-0cd0-4c28-b9d4-78fb0123227a, value = bar)
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Messages successfully committed
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-3]
+[Thread-2] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 3, leaderEpoch = 0, offset = 3, CreateTime = 1734772880459, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 73a93f64-6e92-4abf-9064-c3968f0c64e4, value = bar)
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-4]
+[Thread-0] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 4, leaderEpoch = 0, offset = 4, CreateTime = 1734772880479, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 715a2934-ba8d-4c66-b982-eff2271605e6, value = bar)
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Received poll result with 1 records
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - [rebalancing-test-5]
+[Thread-4] INFO io.confluent.examples.rebalancing.longrunning.ConsumerThread - Start processing record: ConsumerRecord(topic = rebalancing-test, partition = 5, leaderEpoch = 0, offset = 4, CreateTime = 1734772880475, serialized key size = 36, serialized value size = 3, headers = RecordHeaders(headers = [], isReadOnly = false), key = 4a655244-3d6e-4c9a-88ca-bef7daec4121, value = bar)
+
+Process finished with exit code 130 (interrupted by signal 2:SIGINT)
+
